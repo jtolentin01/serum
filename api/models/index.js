@@ -6,7 +6,6 @@ const connectDB = async () => {
         const address = ckey.DB_ADDR;
         await mongoose.connect(address);
     } catch (error) {
-        instMiddleWare.useLoggerDumpErr(error);
         throw new Error(error);
         
     };
